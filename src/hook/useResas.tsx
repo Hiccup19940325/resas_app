@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { loadInfo, removeInfo, setAge } from "../redux/slices/resas";
+import { loadInfo, removeInfo, setAge, initLoad } from "../redux/slices/resas";
 import { useCallback } from "react";
 
 
@@ -18,9 +18,14 @@ export default function useResas() {
         setAge(filter, dispatch)
     }, [dispatch])
 
+    const loadPrefectures = useCallback(async () => {
+        await initLoad(dispatch)
+    }, [dispatch])
+
     return {
         loadPopulation,
         removePopulation,
-        setFilter
+        setFilter,
+        loadPrefectures
     }
 }

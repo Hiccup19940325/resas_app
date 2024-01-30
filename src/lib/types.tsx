@@ -5,14 +5,15 @@ export interface Prefecture {
 }
 
 export interface ResasState {
+    prefectures: Prefecture[]
     isLoading: boolean
-    lists: PopulationInfo[]
     age: string
+    lists: PopulationInfo[]
 }
 
 export interface PopulationInfo {
     prefCode: number
-    population: AgeData[]
+    data: AgeData[]
 }
 
 

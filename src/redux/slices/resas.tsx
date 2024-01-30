@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Dispatch } from "@reduxjs/toolkit";
 import { ResasState } from "../../lib/types";
-import { api_population } from "../../lib/const";
+import { api_population, apiUrl } from "../../lib/const";
 import { selectOption } from "../../lib/const";
 
 
 const initialState: ResasState = {
+    prefectures: [],
     lists: [],
     isLoading: false,
-    age: selectOption[0].text
+    age: selectOption[0]
 }
 
 export const resasSlice = createSlice({
@@ -27,6 +28,9 @@ export const resasSlice = createSlice({
         },
         setAge(state, action) {
             state.age = action.payload
+        },
+        initLoad(state, action) {
+            state.prefectures = action.payload;
         }
     }
 })
@@ -40,9 +44,9 @@ export const loadInfo = async (prefCode: number, dispatch: Dispatch) => {
             headers: { "X-API-KEY": `${process.env.REACT_APP_API_KEY}` }
         })
         if (res) {
-            const data = await res.json();
-            console.log(data)
-            const payload = { ...data.result.data, prefCode };
+            const response = await res.json();
+            const { data } = response.result
+            const payload = { data, prefCode };
             console.log(payload)
             dispatch(resasSlice.actions.loadSuccess(payload))
         }
@@ -51,10 +55,26 @@ export const loadInfo = async (prefCode: number, dispatch: Dispatch) => {
     }
 }
 
-export const removeInfo = (prefCode: number, dispatch: Dispatch) => {
-    dispatch(resasSlice.actions.removeSeccess({ payload: prefCode }))
+export const removeInfo = (payload: number, dispatch: Dispatch) => {
+    dispatch(resasSlice.actions.removeSeccess(payload))
 }
 
-export const setAge = (filter: string, dispatch: Dispatch) => {
-    dispatch(resasSlice.actions.setAge({ payload: filter }))
+export const setAge = (payload: string, dispatch: Dispatch) => {
+    dispatch(resasSlice.actions.setAge(payload))
+}
+
+export const initLoad = async (dispatch: Dispatch) => {
+    try {
+        const response = await fetch(apiUrl, {
+            method: "GET",
+            headers: { "X-API-KEY": `${process.env.REACT_APP_API_KEY}` },
+        })
+        if (response) {
+            const data = await response.json()
+            const payload = data.result;
+            dispatch(resasSlice.actions.initLoad(payload))
+        }
+    } catch (error) {
+        throw (error);
+    }
 }

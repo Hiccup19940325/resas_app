@@ -16,7 +16,7 @@ const Select: React.FC = () => {
     return (
         <SelectContainer>
             <select value={select} onChange={selectHandler}>
-                {selectOption.map(item => <option value={item.text} key={item.id}>{item.text}</option>)}
+                {selectOption.map((item, index) => <option value={item} key={index}>{item}</option>)}
             </select>
         </SelectContainer>
     )
