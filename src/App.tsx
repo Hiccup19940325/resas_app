@@ -1,17 +1,18 @@
 import React from 'react';
 import './App.css';
-import CheckBox from './components/checkBox/checkBox.components';
+import { store } from './redux/store';
+import { Provider } from 'react-redux';
 import PrefectureCard from './components/prefectureCard/prefectureCard.component';
+import Select from './components/select/Select.component';
 
 
-const lists = ["name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name",]
 
 function App() {
-  const checkHandler = (name: string, checked: boolean) => {
-    console.log(name, checked)
-  }
   return (
-    <PrefectureCard prefectures={lists} />
+    <Provider store={store}>
+      <PrefectureCard />
+      <Select />
+    </Provider>
   );
 }
 

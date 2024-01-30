@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const CheckBoxContainer = styled.div`
-    width:100px;
+    width:110px;
     border-radius: 10px;
     border: 2px;
     text-align: center;
@@ -10,14 +10,14 @@ export const CheckBoxContainer = styled.div`
     background-color: white;
 
     input {
-        width:20px;
-        height:20px;
+        width:15px;
+        height:15px;
     }
 
     label {
         display: contents;
         marginLeft: 1em;
         cursor: pointer;
-        font-size: 25px;
+        font-size: 18px;
     }
 `
