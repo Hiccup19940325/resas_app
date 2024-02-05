@@ -1,4 +1,4 @@
-# eCommerce Nextjs + Node(Typescript) Demonstration
+# Resas Web App React.js(Typescript) Demonstration
 
 - frontend: React 18.2.0(hooks / redux-toolkit /resas api)
 
