@@ -1,4 +1,3 @@
-
 export interface Prefecture {
     prefCode: number
     prefName: string
@@ -7,6 +6,7 @@ export interface Prefecture {
 export interface ResasState {
     prefectures: Prefecture[]
     isLoading: boolean
+    error: string
     age: string
     lists: PopulationInfo[]
 }
@@ -15,7 +15,6 @@ export interface PopulationInfo {
     prefCode: number
     data: AgeData[]
 }
-
 
 export interface AgeData {
     label: string

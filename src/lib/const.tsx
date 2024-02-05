@@ -1,4 +1,4 @@
-export const apiUrl = 'https://opendata.resas-portal.go.jp/api/v1/prefectures';
-export const api_population = 'https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear';
-export const selectOption = ["総人口", "年少人口", "生産年齢人口", "老年人口",]
-
+export const apiUrl = 'https://opendata.resas-portal.go.jp/api/v1/prefectures'
+export const api_population =
+    'https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear'
+export const selectOption = ['総人口', '年少人口', '生産年齢人口', '老年人口']

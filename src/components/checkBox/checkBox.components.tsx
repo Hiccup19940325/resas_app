@@ -1,5 +1,5 @@
-import { useCallback, useState } from "react";
-import { CheckBoxContainer } from "./checkBox.styles";
+import { useCallback, useMemo, useState } from 'react'
+import { CheckBoxContainer } from './checkBox.styles'
 
 interface Props {
     name: string
@@ -8,21 +8,21 @@ interface Props {
 }
 
 const CheckBox: React.FC<Props> = ({ name, checkHandler, code }) => {
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(false)
     const checkedHandler = useCallback(async () => {
         setChecked(!checked)
         checkHandler(code, !checked)
     }, [checked, code, checkHandler])
-    return (
-        <CheckBoxContainer onClick={checkedHandler}>
-            <input
-                type="checkbox"
-                checked={checked}
-                name="prefecture name"
-            />
-            <label>{name}</label>
-        </CheckBoxContainer>
-    )
+
+    const showCheckBox = useMemo(() => {
+        return (
+            <CheckBoxContainer onClick={checkedHandler}>
+                <input type="checkbox" checked={checked} name="prefecture name" />
+                <label>{name}</label>
+            </CheckBoxContainer>
+        )
+    }, [name, checkedHandler, checked])
+    return <>{showCheckBox}</>
 }
 
-export default CheckBox;
+export default CheckBox
