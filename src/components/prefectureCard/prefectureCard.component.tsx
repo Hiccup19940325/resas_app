@@ -1,12 +1,11 @@
 import { CardContainer } from './prefectureCard.styles'
 import CheckBox from '../checkBox/checkBox.components'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 import useResas from '../../hook/useResas'
 import { Prefecture } from '../../lib/types'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
 import Spinner from '../loadingSpinner/spinner.component'
-import { inArray } from 'highcharts'
 
 const PrefectureCard: React.FC = () => {
     const { prefectures, isLoading } = useSelector((state: RootState) => state.resas)

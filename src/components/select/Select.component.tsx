@@ -9,10 +9,10 @@ const Select: React.FC = () => {
     const [select, setSelect] = useState('')
 
     const selectHandler = useCallback(
-        (e: any) => {
+        (e: React.FormEvent<HTMLSelectElement>) => {
             console.log(e.target)
-            setSelect(e.target.value)
-            setFilter(e.target.value)
+            setSelect(e.currentTarget.value)
+            setFilter(e.currentTarget.value)
         },
         [setFilter]
     )
