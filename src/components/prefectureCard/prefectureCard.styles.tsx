@@ -10,23 +10,23 @@ export const CardContainer = styled.div`
     justify-content: space-evenly;
     justify-self: auto;
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1536px) {
         grid-template-columns: auto auto auto auto auto auto auto;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1280px) {
         grid-template-columns: auto auto auto auto auto auto;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         grid-template-columns: auto auto auto auto;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         grid-template-columns: auto auto auto;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 640px) {
         grid-template-columns: auto auto;
     }
 `

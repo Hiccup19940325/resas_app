@@ -32,13 +32,13 @@ npm start
 ```
 > This installs all dependencies with npm. So after that your development environment is ready to use.
 
-### Unit Test
+### Step 2: Unit Test
 - Run `npm run test` to perform the unit test. 
 
-### Format
+### Step 3: Format
 - Run `npm run format` to format the code style.
 
-### Build
+### Step 4: Build
 - Run `npm run build` to build the project.
 
 ## Key Features
