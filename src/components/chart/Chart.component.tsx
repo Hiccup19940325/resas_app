@@ -41,6 +41,9 @@ const Chart: React.FC = () => {
                     text: '人口数'
                 }
             },
+            accessibility: {
+                enabled: false
+            },
             series:
                 chartData.length === 0
                     ? [{ type: 'line', name: '都道府県名', data: [] }]

@@ -59,7 +59,6 @@ export const loadInfo = async (prefCode: number, dispatch: Dispatch) => {
             const response = await res.json()
             const { data } = response.result
             const payload = { data, prefCode }
-            console.log(payload)
             dispatch(resasSlice.actions.loadSuccess(payload))
         }
     } catch (error) {

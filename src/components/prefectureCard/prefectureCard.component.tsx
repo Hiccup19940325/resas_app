@@ -13,7 +13,6 @@ const PrefectureCard: React.FC = () => {
 
     const checkHandler = useCallback(
         async (code: number, checked: boolean) => {
-            console.log('run')
             checked ? await loadPopulation(code) : removePopulation(code)
         },
         [loadPopulation, removePopulation]
