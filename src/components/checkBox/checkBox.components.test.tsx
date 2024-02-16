@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import CheckBox from './checkBox.components'
 import configureStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
-import { mockData } from '../../lib/const'
+import { mockData } from '../../lib/development_Const'
 
 const mockStore = configureStore([])
 

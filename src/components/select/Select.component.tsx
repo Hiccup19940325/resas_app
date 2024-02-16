@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
 import { SelectContainer } from './Select.styles'
-import { selectOption } from '../../lib/const'
+import { selectOption } from '../../lib/production_Const'
 import useResas from '../../hook/useResas'
 
 const Select: React.FC = () => {

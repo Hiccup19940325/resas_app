@@ -1,22 +1,33 @@
 # Resas Web App React.js(Typescript) Demonstration
 
-- frontend: React 18.2.0(hooks / redux-toolkit /resas api)
+-   frontend: React 18.2.0(hooks / redux-toolkit /resas api)
 
-- Environment: node.js 18.18.1(express)
+-   Environment: node.js 18.18.1(express)
 
-- test: Unit test(jest)
+-   test: Unit test(jest)
 
-- lint: implement the prettier and Eslint
+-   lint: implement the prettier and Eslint
 
-- deploy: used the Vercel
+-   deploy: used the Vercel
 
 # Live Demo
-https://resas-app-seven.vercel.app/
 
+https://resas-app-seven.vercel.app/
 
 ## ❯ Getting Started
 
-### Step 1: Set up the Development Environment
+### Step 1: Get the Resas api key
+
+you need to get the resas api key at following url.
+go to [Resas](https://opendata.resas-portal.go.jp/) and register the account and get the api key.
+set the env params like that
+
+```bash
+REACT_APP_API_KEY=...
+```
+
+### Step 2: Set up the Development Environment
+
 You need to set up your development environment before you can do anything.
 
 Install [Node.js and NPM](https://nodejs.org/en/download/)
@@ -30,22 +41,27 @@ npm install(or npm install --force)
 ```bash
 npm start
 ```
+
 > This installs all dependencies with npm. So after that your development environment is ready to use.
 
-### Step 2: Unit Test
-- Run `npm run test` to perform the unit test. 
+### Step 3: Unit Test
 
-### Step 3: Format
-- Run `npm run format` to format the code style.
+-   Run `npm run test` to perform the unit test.
 
-### Step 4: Build
-- Run `npm run build` to build the project.
+### Step 4: Format
+
+-   Run `npm run format` to format the code style.
+
+### Step 5: Build
+
+-   Run `npm run build` to build the project.
 
 ## Key Features
-- implement the responsive using raw CSS and styled component
-- implement the standard architecture of React
-- implement the all component unit test using mockstore and jest.
-- use the redux to cache the data and add the loading bar during data-fetching.
-- prevent the prefecture checkbox double click error.
-- optimize the code using react hook such as useCallBack and useMemo.
-- integrate the Eslint and Prettier for smart code style.
+
+-   implement the responsive using raw CSS and styled component
+-   implement the standard architecture of React
+-   implement the all component unit test using mockstore and jest.
+-   use the redux to cache the data and add the loading bar during data-fetching.
+-   prevent the prefecture checkbox double click error.
+-   optimize the code using react hook such as useCallBack and useMemo.
+-   integrate the Eslint and Prettier for smart code style.

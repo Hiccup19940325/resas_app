@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react'
-import './App.css'
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
 import PrefectureCard from './components/prefectureCard/prefectureCard.component'

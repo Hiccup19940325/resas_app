@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { loadInfo, removeInfo, setAge, initLoad } from '../redux/slices/resas'
+import { loadInfo, removeInfo, setAge, initLoad } from '../api/resas'
 import { useCallback } from 'react'
 
 export default function useResas() {

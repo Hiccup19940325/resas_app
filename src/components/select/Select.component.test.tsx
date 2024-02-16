@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 import Select from './Select.component'
 import configureStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
-import { mockData } from '../../lib/const'
+import { mockData } from '../../lib/development_Const'
 
 const mockStore = configureStore([])
 
